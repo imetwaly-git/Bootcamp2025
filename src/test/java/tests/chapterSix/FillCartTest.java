@@ -1,31 +1,13 @@
 package tests.chapterSix;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
-import java.time.Duration;
-
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.testng.Assert.assertTrue;
 
-public class FillCartTest {
-    WebDriver driver;
-    WebDriverWait wait;
-
-    @BeforeTest
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://greatshop.polteq-testing.com/");
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+public class FillCartTest extends TestShopScenario {
 
     @Test
     public void addToCart(){
@@ -46,10 +28,5 @@ public class FillCartTest {
         assertThat(cartAdded.getText()).as("Amount in cart").isEqualTo("1");
         System.out.println("\nThe following amount is added to the cart:" + " " + cartAdded.getText());
 
-    }
-
-    @AfterTest
-    public void tearDown() {
-        driver.quit();
     }
 }
