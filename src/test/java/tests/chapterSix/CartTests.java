@@ -25,6 +25,7 @@ public class CartTests extends TestShopScenario {
             addIpodToCart();
             assertAddedToCart();
             deleteItemFromCart();
+            assertCartIsEmpty();
         }
         else {
             System.out.println("Cart is not empty!");
@@ -32,9 +33,9 @@ public class CartTests extends TestShopScenario {
     }
 
     private boolean assertCartIsEmpty(){
-        WebElement cartEmpty = driver.findElement(By.className("ajax_cart_no_product"));
+        WebElement cartEmpty = wait.until(ExpectedConditions.elementToBeClickable(By.className("ajax_cart_no_product")));
         assertTrue(cartEmpty.isDisplayed(), "Cart is not empty");
-        System.out.println("Cart is empty");
+        System.out.println("\nCart is empty");
         return true;
     }
 
