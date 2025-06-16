@@ -36,6 +36,21 @@ public class HeaderPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(logoutButton)).click();
     }
 
+    public String getUserName(){
+       wait.until(ExpectedConditions.visibilityOf(accountButton));
+       return accountButton.getText();
+    }
+
+    public boolean signOutButtonPresent(){
+        try {
+            wait.until(ExpectedConditions.visibilityOf(logoutButton));
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
+
     public HeaderPage(WebDriver driver) {
         super(driver);
     }
