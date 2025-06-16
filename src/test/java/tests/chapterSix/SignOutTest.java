@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.*;
+import tests.TestShopScenario;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.testng.Assert.*;
 import java.util.List;
 
-public class SignOutTest extends TestShopScenario  {
+public class SignOutTest extends TestShopScenario {
 
     String email = "ibrahim.metwaly@polteq.com";
     String pwd = "12345";
