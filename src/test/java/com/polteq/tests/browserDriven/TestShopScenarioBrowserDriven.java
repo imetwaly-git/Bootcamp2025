@@ -1,17 +1,18 @@
-package tests;
+package com.polteq.tests.browserDriven;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import tests.lib.DriverFactory;
-import tests.pages.AuthenticationPage;
-import tests.pages.ContactUsPage;
-import tests.pages.HeaderPage;
+import org.testng.annotations.Parameters;
+import com.polteq.lib.DriverFactory;
+import com.polteq.pages.AuthenticationPage;
+import com.polteq.pages.ContactUsPage;
+import com.polteq.pages.HeaderPage;
 
 import java.time.Duration;
 
-public class TestShopScenario {
+public class TestShopScenarioBrowserDriven {
 
    protected WebDriver driver;
    protected WebDriverWait wait;
@@ -19,9 +20,11 @@ public class TestShopScenario {
    protected AuthenticationPage authenticationPage;
    protected ContactUsPage contactUsPage;
 
+    @Parameters("browser")
     @BeforeMethod
-    public void setUp() {
-        driver = DriverFactory.createDriver(DriverFactory.BrowserType.FIREFOX);
+    public void setUp(DriverFactory.BrowserType browserType) {
+       // driver = DriverFactory.createDriver(DriverFactory.BrowserType.FIREFOX);
+        driver = DriverFactory.createDriver(browserType);
         headerPage = new HeaderPage(driver);
         authenticationPage = new AuthenticationPage(driver);
         contactUsPage = new ContactUsPage(driver);

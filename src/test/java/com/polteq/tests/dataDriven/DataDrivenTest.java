@@ -1,8 +1,8 @@
-package tests.dataDriven;
+package com.polteq.tests.dataDriven;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import tests.TestShopScenario;
+import com.polteq.tests.TestShopScenario;
 
 
 import static org.assertj.core.api.Assertions.assertThat;

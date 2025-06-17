@@ -1,11 +1,11 @@
-package tests.chapterSix;
+package com.polteq.tests.chapterSix;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
-import tests.TestShopScenario;
+import com.polteq.tests.TestShopScenario;
 
 import java.util.List;
 import java.util.Objects;

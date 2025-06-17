@@ -9,7 +9,7 @@
         <parameter name="orderID" value="16515" />
         <parameter name="message" value="this is a message" />
         <classes>
-            <class name="tests.dataDriven.DataDrivenTest" />
+            <class name="com.polteq.tests.dataDriven.DataDrivenTest" />
         </classes>
     </test>
     <test name="dataVar2Test">
@@ -18,7 +18,7 @@
         <parameter name="orderID" value="9999" />
         <parameter name="message" value="this is a message nr 2" />
         <classes>
-            <class name="tests.dataDriven.DataDrivenTest" />
+            <class name="com.polteq.tests.dataDriven.DataDrivenTest" />
         </classes>
     </test>
     <test name="dataVar3Test">
@@ -27,7 +27,7 @@
         <parameter name="orderID" value="11111" />
         <parameter name="message" value="this is a message nr 3" />
         <classes>
-            <class name="tests.dataDriven.DataDrivenTest" />
+            <class name="com.polteq.tests.dataDriven.DataDrivenTest" />
         </classes>
     </test>
 </suite>

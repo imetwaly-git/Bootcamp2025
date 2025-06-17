@@ -1,9 +1,9 @@
-package tests.browserDriven;
+package com.polteq.tests.browserDriven;
 
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
-import tests.pages.ContactUsPage;
-import tests.pages.HeaderPage;
+import com.polteq.pages.ContactUsPage;
+import com.polteq.pages.HeaderPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

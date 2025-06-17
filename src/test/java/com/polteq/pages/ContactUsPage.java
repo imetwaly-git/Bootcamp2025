@@ -1,4 +1,4 @@
-package tests.pages;
+package com.polteq.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

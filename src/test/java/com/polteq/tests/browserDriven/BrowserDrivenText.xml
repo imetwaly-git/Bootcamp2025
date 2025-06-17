@@ -6,13 +6,13 @@
     <test name="FirefoxTest">
         <parameter name="browser" value="FIREFOX" />
         <classes>
-            <class name="tests.browserDriven.BrowserDrivenTest" />
+            <class name="com.polteq.tests.browserDriven.BrowserDrivenTest" />
         </classes>
     </test>
     <test name="ChromeTest">
         <parameter name="browser" value="CHROME" />
         <classes>
-            <class name="tests.browserDriven.BrowserDrivenTest" />
+            <class name="com.polteq.tests.browserDriven.BrowserDrivenTest" />
         </classes>
     </test>
 </suite>

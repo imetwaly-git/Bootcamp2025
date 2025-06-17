@@ -1,6 +1,6 @@
-package tests.chapterNine;
+package com.polteq.tests.chapterNine;
 import org.testng.annotations.Test;
-import tests.TestShopScenario;
+import com.polteq.tests.TestShopScenario;
 import static org.testng.Assert.assertTrue;
 
 public class LoginTest extends TestShopScenario {

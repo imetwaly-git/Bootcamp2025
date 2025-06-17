@@ -1,10 +1,10 @@
-package tests.chapterNine;
+package com.polteq.tests.chapterNine;
 
 import org.assertj.core.api.SoftAssertions;
 import org.testng.annotations.Test;
-import tests.TestShopScenario;
-import tests.pages.ContactUsPage;
-import tests.pages.HeaderPage;
+import com.polteq.tests.TestShopScenario;
+import com.polteq.pages.ContactUsPage;
+import com.polteq.pages.HeaderPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
