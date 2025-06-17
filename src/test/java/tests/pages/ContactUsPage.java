@@ -22,10 +22,13 @@ public class ContactUsPage extends BasePage {
     private WebElement sendButton;
 
     @FindBy(css = ".alert.alert-danger>ol>li")
-    private WebElement invalidEmailElement;
+    private WebElement ticketSubmittedInvalidBanner;
+
+    @FindBy (css = ".alert.alert-danger li")
+    private WebElement invalidEmailText;
 
     @FindBy(css = ".alert.alert-success")
-    private WebElement ticketSubmittedBanner;
+    private WebElement ticketSubmittedSuccessBanner;
 
     private static final String subjectHeadingSelectBoxLocatorText = "id_contact";
     private final By subjectHeadingSelectBoxByLocator = By.id(subjectHeadingSelectBoxLocatorText);
@@ -60,8 +63,22 @@ public class ContactUsPage extends BasePage {
     }
 
     public String getValidationMessage(){
-        wait.until(ExpectedConditions.visibilityOf(ticketSubmittedBanner));
-        return ticketSubmittedBanner.getText();
+        wait.until(ExpectedConditions.visibilityOf(ticketSubmittedSuccessBanner));
+        return ticketSubmittedSuccessBanner.getText();
+    }
+
+    public boolean invalidEmailMessageVisible(){
+        try {
+            wait.until(ExpectedConditions.visibilityOf(ticketSubmittedInvalidBanner));
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
+
+    public String getInvalidEmailMessageText(){
+        return wait.until(ExpectedConditions.visibilityOf(invalidEmailText)).getText();
     }
 
     public ContactUsPage(WebDriver driver) {
